@@ -35,12 +35,20 @@ public class PersonMenu extends Head{
         return true;
     }
     FinanceData financeData = new FinanceData();
-    public void SmokeInfo(){
+    public double SmokeInfo(){
         System.out.println("Chekasizmi?");
         System.out.println(" 1.Xa | 2.Yoq");
         switch (Head.numm){
-            case 1 : financeData.setSmoke(20000);
-            case 2 : financeData.setSmoke(0);
+            case 1 : {
+                financeData.smoke=20000;
+                break;
+            }
+            case 2 : {
+                financeData.smoke=0;
+                break;
+            }
+
         }
+        return financeData.smoke;
     }
 }

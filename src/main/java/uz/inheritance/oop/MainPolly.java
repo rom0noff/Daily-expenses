@@ -4,25 +4,21 @@ import java.util.Scanner;
 
 public class MainPolly {
     public static void main(String[] args) {
-        //
+
         Scanner scanner = new Scanner(System.in);
         FinanceData financeData = new FinanceData();
 
         PersonMenu personMenu = new PersonMenu();
         personMenu.MenuInfo();
-
         Head.num = scanner.nextInt();
         personMenu.SwitchInfo();
         financeData.setSalary(scanner.nextDouble());
-
-        System.out.println(financeData.getSalary());
-
-
-
+        financeData.info();
         personMenu.SmokeInfo();
         Head.numm = scanner.nextInt();
         System.out.println("============================");
-
+        financeData.info();
+        System.out.println(financeData.smoke);
         Fooddata fooddata = new Fooddata();
         fooddata.BreakfastInfo();
         financeData.setBreakfastfinance(scanner.nextDouble());
@@ -48,13 +44,13 @@ public class MainPolly {
 
         Party party = new Party();
         party.PartyInfo();
-
+        financeData.info();
         fooddata.DinnerInfo();
         financeData.setDinnerfinance(scanner.nextDouble());
         financeData.info();
-        financeData.info();
         System.out.println("============================");
-        financeData.info();
+        financeData.Ininfo(financeData.halfSalary, financeData.shareSalary, financeData.sum, financeData.salary1);
+
 
 
 
